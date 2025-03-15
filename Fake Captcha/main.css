@@ -1,0 +1,153 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    padding: 50px;
+    justify-content: center;
+}
+
+.landing {
+    transition: opacity 0.2s;
+}
+
+.captcha-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    gap: 30px;
+    padding: 1em;
+    width: fit-content;
+    align-items: center;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+.captcha-container button {
+    width: 3em;
+    height: 3em;
+    transition: 0.2s;
+    background-color: #313131;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /*pointer-events: none;*/
+}
+
+.captcha-container p {
+    font-family: 'Courier New', monospace;
+}
+
+.captcha-container button:hover {
+    background-color: #272727;
+}
+
+.captcha-bg {
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact centering */
+    text-align: center;
+    background-color: rgba(54, 54, 54, 0.1);
+    width: fit-content;
+    padding: 1em;
+    position: absolute; /* Use absolute positioning */
+    z-index: 1000;
+    transition: opacity 0.2s;
+}
+
+.picker-grid {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    background-color: rgb(20, 20, 20);
+    padding: 1em;
+    border-radius: 9px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    justify-items: center;
+    align-items: center;
+}
+
+.picker-grid img {
+    width: 10em;
+    height: 10em;
+    padding: 0.5em;
+    margin: 0.3em;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 9px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.2s ease;
+}
+
+.picker-grid img:hover {
+    transform: scale(0.98);
+    background-color: rgba(255,255,255,0.05);
+}
+
+.pong button {
+    width: 40px;
+    height: 40px;
+    background-color: #313131;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-image: url("checkmark.svg");
+    background-size: cover;
+    background-position: center;
+    /*pointer-events: none;*/
+}
+
+.pong {
+    width: 500px;
+    height: 500px;
+    text-align: left;
+}
+
+.adcontent {
+    position: fixed;
+    z-index: 9000;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    margin: -4em;
+}
+
+.ad {
+    background-color: rgba(255,0,0,0.5);
+    display: block;
+    width: fit-content;
+    padding: 0.6em;
+    position: absolute;
+    pointer-events: all;
+}
+
+.ad h1 {
+    font-size: 1.5em;
+}
+
+.binary {
+    display: block;
+    background-color: rgb(20, 20, 20);
+    padding: 1em;
+    border-radius: 9px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    justify-items: center;
+    align-items: center;
+}
+
+.binary p {
+    max-width: 40em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.binary input {
+    display: block;
+    background-color: rgb(20, 20, 20);
+    padding: 1em;
+    border-radius: 9px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    justify-items: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
