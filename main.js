@@ -46,6 +46,12 @@ function startpong() {
         }
 
         document.getElementById("confirm-ball").style.transform = `translate(${xp}px, ${yp}px)`;
+        var desc = document.getElementById("pong-root").getElementsByTagName('div');
+        for (i = 0; i < desc.length; ++i) {
+            let e = desc[i];
+            e.style.transform = `translate(${-15 + (i * 515)}px, ${yp}px)`;
+        }
+        
         console.log(xp)
         xp = xp + xd  * sped;
         yp = yp + yd  * sped;
@@ -79,6 +85,7 @@ function winner() {
 
 var ads = Array();
 var rf = 0;
+var num = 0;
 
 async function adService() {
     setInterval(function() {
@@ -107,11 +114,14 @@ async function adService() {
 
         // check if new
         if (rf % difficulty == 0) {
+            num++;
             var node = document.getElementById("adtemplate");
             var clone = node.cloneNode(true);
             clone.style.display = "block";
+            clone.style.transform = `translate(${Math.random()*window.innerWidth}px, ${Math.random()*window.innerHeight}px)`;
             //clone.getElementsByTagName("")
             document.getElementById("adcontent").appendChild(clone);
+            document.getElementById("adcnt").innerHTML = `${num} ads spawned`;
         }
     },(1/60) * 1000);
 }

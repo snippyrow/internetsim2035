@@ -91,6 +91,8 @@ body {
     background-image: url("Assets/checkmark.svg");
     background-size: cover;
     background-position: center;
+    margin-left: auto;
+    margin-right: auto;
     /*pointer-events: none;*/
 }
 
@@ -150,4 +152,12 @@ body {
     margin-left: auto;
     margin-right: auto;
     color: white;
+}
+
+.paddle {
+    width: 15px;
+    height: 60px;
+    position: absolute;
+    background-color: white;
+    z-index: 9001;
 }
