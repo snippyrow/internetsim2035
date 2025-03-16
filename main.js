@@ -52,7 +52,6 @@ function startpong() {
             e.style.transform = `translate(${-15 + (i * 515)}px, ${yp}px)`;
         }
         
-        console.log(xp)
         xp = xp + xd  * sped;
         yp = yp + yd  * sped;
         if (xp >= 500 - 40) {
@@ -132,7 +131,6 @@ window.addEventListener('load', function () {
         difficulty = 100-parseInt(slider.value);
     });
     document.getElementById("start").addEventListener('click',function() {
-        console.log("E")
         document.getElementById("landing").style.opacity = "0";
         document.getElementById("captcha-root").style = "opacity: 1; display: box;";
         //document.getElementById("captcha-root").style.opacity = "1";
@@ -143,7 +141,6 @@ window.addEventListener('load', function () {
         var desc = document.getElementById("picker-grid-1").getElementsByTagName('*');
         for (i = 0; i < desc.length; ++i) {
             let e = desc[i];
-            console.log(e)
             e.addEventListener('click',function() {
                 if (e.getAttribute('real') === "true") {
                     e.style.backgroundColor = "green";
@@ -217,8 +214,7 @@ window.addEventListener('load', function () {
             e.setAttribute("dx",-Math.cos(a));
             e.setAttribute("dy",-Math.sin(a));
         }
-    
-        console.log(`Clicked at X: ${x}, Y: ${y}`);
+
     });
 })
 
@@ -227,6 +223,6 @@ document.addEventListener("touchstart", playAudio, { once: true });
 document.addEventListener("click", playAudio, { once: true });
 function playAudio() {
     var audio = new Audio('Assets/fan.mp3');
-    audio.play().catch(error => console.log("Audio play failed:", error));
+    audio.play()
     adService();
 }
