@@ -29,7 +29,7 @@ var xd = 1;
 var yd = 1;
 var sped = 5;
 
-var difficulty = 30;
+var difficulty = 60;
 
 function randf() {
     return 0.5 + (Math.random() / 2);
